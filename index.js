@@ -2,5 +2,22 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 "/"];
 
 
+let passwordLength=15
 
+function getRandomCharacters(){
+    let randomChar = Math.floor(Math.random()*characters.length)
+    return characters[randomChar]
+}
+console.log(getRandomCharacters())
 
+let rectBox1= document.getElementById("rect-box1")
+let rectBox2 = document.getElementById("rect-box2")
+let passwordButton = document.getElementById("passwordButton")
+
+function genpassword(){
+    let randomPassword= ""
+    for(let i=0; i<passwordLength; i++){
+        randomPassword+=getRandomCharacters()
+        rectBox1.textContent=randomPassword
+    }
+}
