@@ -19,5 +19,6 @@ function genpassword(){
     for(let i=0; i<passwordLength; i++){
         randomPassword+=getRandomCharacters()
         rectBox1.textContent=randomPassword
+        rectBox2.textContent=randomPassword
     }
 }
